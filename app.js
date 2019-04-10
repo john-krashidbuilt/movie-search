@@ -13,11 +13,11 @@ app.get("/results", function(req, res){
     request(url, function(error, response, body){
         if(!error && response.statusCode ==200){
             var data = JSON.parse(body);
-            data
-            .Search
-            .sort((a,b) => {
-                return b.Year - a.Year;
-            })
+            // data
+            // .Search
+            // .sort((a,b) => {
+            //     return b.Year - a.Year;
+            // })
             res.render("results", {data});
             console.log(data);
         }
@@ -27,6 +27,3 @@ app.get("/results", function(req, res){
 app.listen(3000, '127.0.0.1', function(){
     console.log("Movie App has started!!!");
 });
-
-// var x = {something: 12345}
-// var y =[x]
